@@ -10,12 +10,16 @@ var core_1 = require("@angular/core");
 var RegisterComponent = (function () {
     function RegisterComponent() {
     }
+    RegisterComponent.prototype.onSubmit = function (value) {
+        console.log(value);
+    };
     return RegisterComponent;
 }());
 RegisterComponent = __decorate([
     core_1.Component({
         selector: 'register',
-        template: "<h1>Register</h1>"
+        templateUrl: "app/register.component.html",
+        styles: ["input.ng-invalid{border-left:5px solid orange;}"]
     })
 ], RegisterComponent);
 exports.RegisterComponent = RegisterComponent;

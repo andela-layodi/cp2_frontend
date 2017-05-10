@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 @Component({
   selector: 'login',
-  template: `<h1>Log In</h1>`
+  templateUrl: `app/login.component.html`,
+  styles: [`input.ng-invalid{border-left:5px solid orange;}`]
 })
-export class LoginComponent { }
+export class LoginComponent {
+    onSubmit(value: any){
+        console.log(value);
+    }
+}

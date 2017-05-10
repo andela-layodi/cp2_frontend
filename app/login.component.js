@@ -10,12 +10,16 @@ var core_1 = require("@angular/core");
 var LoginComponent = (function () {
     function LoginComponent() {
     }
+    LoginComponent.prototype.onSubmit = function (value) {
+        console.log(value);
+    };
     return LoginComponent;
 }());
 LoginComponent = __decorate([
     core_1.Component({
         selector: 'login',
-        template: "<h1>Log In</h1>"
+        templateUrl: "app/login.component.html",
+        styles: ["input.ng-invalid{border-left:5px solid orange;}"]
     })
 ], LoginComponent);
 exports.LoginComponent = LoginComponent;

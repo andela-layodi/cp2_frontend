@@ -1,0 +1,28 @@
+<div class='container'>
+    <h1 id='titles' align='center'>Log In to Bucket-y!</h1>
+    <form loginForm='ngForm' (ngSubmit)='onSubmit(loginForm.value)'>
+        <div class='form-group'>
+            <label>Your Name</label>
+            <input id='input' type='text' #nameRef='ngModel' minlength='5' maxlength='15' required class='form-control' name='name' ngModel>
+            <div *ngIf='nameRef.errors && (nameRef.dirty || nameRef.touched)' class='alert alert-warning'>
+                <div [hidden]='!nameRef.errors.required'>
+                    Please enter your username
+                </div>
+                <div [hidden]='!nameRef.errors.minlength'>
+                    Please enter at least 5 characters
+                </div>
+                <div [hidden]='!nameRef.errors.maxlength'>
+                    Name cannot be longer that 15 characters
+                </div>
+            </div>
+        </div>
+        <div class='form-group'>
+            <label>Your Password</label>
+            <input type='password' #nameRef2='ngModel' required class='form-control' name='password' ngModel>
+            <div [hidden]='nameRef2.valid || nameRef2.pristine' class="alert alert-warning">
+                Please enter your password to continue
+            </div>
+        </div>
+        <button type='submit' align='center'><h3>Log In</h3></button>
+    </form>
+</div>
