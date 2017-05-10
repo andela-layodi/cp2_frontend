@@ -1,0 +1,52 @@
+/* Master Styles */
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-left: 30px;
+  margin-bottom: 0px;
+}
+#logo {
+    margin-top: -60px;
+    width: 100%;
+}
+#welcome {
+    margin-top: -60px;
+}
+
+#image {
+    width: 100%;
+    height: 84.8%;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    font-family: fantasy;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
