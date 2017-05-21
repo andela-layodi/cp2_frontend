@@ -1,0 +1,61 @@
+<div id='logo' align='center'>
+  <img src='images/buckety_icon.png' style='width:230px;height:230px;'>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <input id="search_box" type="text" name="search" placeholder="Search Bucketlists">
+    </div>
+    <div *ngIf="list_id" class="col-sm-6">
+        <button id ='add_new' class="btn btn-default btn-lg" type='submit' align='center' (click)="redirectToNewItem(list_id)"><h5>New Item</h5></button>
+    </div>
+</div>
+<div id="your_buckets" class="row">
+<h1 id='titles' align='center'>Your Items!</h1>
+</div>
+<div  id="see_bucketlists" class="container">
+<div class="jumbotron" *ngIf="bucketlist && bucketlist.list_items">
+    <h3 *ngIf="!bucketlist.list_items.length">No items have been created</h3>
+    <div *ngFor='let item of bucketlist.list_items'>
+        <h2 align='center'>{{item.item_name}}</h2>
+        <br>
+          <span>Created On:</span>{{item.date_created}}<br>
+          <span>Modified On:</span>{{item.date_modified}}<br>
+          {{bucketlist.id}}
+          {{item.id}}
+          {{item.item_name}}
+  <div class="row">
+      <div class="col-sm-6">
+          <button id ='add_new2' type="button" class="btn btn-default btn-sm" (click)="redirectToUpdateItem(bucketlist.id, item.id, item.item_name)">Edit</button>
+      </div>
+      <div class="col-sm-6">
+          <button id ='add_new2' type="button" class="btn btn-default btn-sm" data-toggle="modal" [attr.data-target]='"#" + item.id'>Delete</button>
+      </div>
+
+      <div class="modal fade" id="{{item.id}}" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Delete</h4>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to delete {{item.item_name}}?</p>
+            </div>
+            <div class="modal-footer">
+              <button id="delete_button" type="button" class="btn btn-default" (click)="DeleteBucketListItem(item)">Yes, I'm sure!</button>
+              <br>
+              <br>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Nope!</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </div>
+  <br>
+  <br>
+  </div>
+</div>
+</div>

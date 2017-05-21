@@ -1,0 +1,16 @@
+<div id='logo' align='center'>
+  <img src='images/buckety_icon.png' style='width:230px;height:230px;'>
+</div>
+<h1 id='titles' align='center'>Create a new Item!</h1>
+<form id="buckety_new" loginForm='ngForm' (ngSubmit)="AddBucketList" #f="ngForm">
+    <div class='form-group'>
+        <label for='username'>New Item Name</label>
+        <input id='input' type='text' ngControl="item_name" #nameRef='ngModel' required autofocus class='form-control' name='item_name' [(ngModel)]="item.item_name">
+        <div *ngIf='nameRef.errors && (nameRef.dirty || nameRef.touched)' class='alert alert-warning'>
+            <div [hidden]='!nameRef.errors.required'>
+                Please enter a item into your bucketlist.
+            </div>
+        </div>
+    </div>
+    <button type='submit' align='center' (click)="AddBucketListItem(item.item_name)"><h3>Save</h3></button>
+</form>

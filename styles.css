@@ -16,11 +16,15 @@ body {
   margin-bottom: 0px;
 }
 #logo {
-    margin-top: -60px;
+    margin-top: -10px;
     width: 100%;
 }
 #welcome {
     margin-top: -60px;
+}
+
+#buckety_new {
+    padding: 25px;
 }
 
 #image {
@@ -71,6 +75,7 @@ nav a:active {
 #titles {
     color: #3a250f;
     font-family: fantasy;
+    margin-top: -45px;
 }
 label {
     color: #8e5b26;
@@ -96,4 +101,58 @@ button h3 {
 }
 #input {
     font-family: fantasy;
+}
+#add_new {
+    color: #82572a;
+    font-family: fantasy;
+    width: 50%;
+    padding: 0px 20px 3px 30px;
+    background-color: #eee;
+    margin-left: 295px;
+}
+
+#search_box[type=text] {
+   width: 200px;
+   box-sizing: border-box;
+   border: 2px solid #ccc;
+   border-radius: 4px;
+   font-size: 16px;
+   font-family: fantasy;
+   background-color: white;
+   background-position: 10px 10px;
+   background-repeat: no-repeat;
+   padding: 9px 10px 9px 31px;
+   -webkit-transition: width 0.4s ease-in-out;
+   transition: width 0.4s ease-in-out;
+   margin-left: 20px;
+}
+
+/* When the input field gets focus, change its width to 100% */
+#search_box[type=text]:focus {
+    width: 30%;
+}
+
+#your_buckets {
+    margin-top: 70px;
+}
+#see_bucketlists {
+    font-family: fantasy;
+    text-align: -webkit-center;
+}
+
+#see_bucketlists h2 {
+    color: #82572a;
+}
+
+#add_new2 {
+    color: #82572a;
+    font-family: fantasy;
+    width: 50%;
+    padding: 10px 20px 3px 30px;
+    background-color: #eee;
+    margin-top: 20px;
+}
+
+#delete_button {
+    background-color: #eee;
 }

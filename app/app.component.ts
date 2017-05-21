@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
+import { Configuration } from './shared/app.configuration';
 @Component({
   selector: 'my-app',
-  template: `<welcome-page></welcome-page>
-             <nav align='center'>
-                <a routerLink="/register" routerLinkActive="active"></a>
-                <a routerLink="/login" routerLinkActive="active"></a>
-             </nav>
-             <router-outlet></router-outlet>`
+  templateUrl: `app/app.component.html`
 })
-export class AppComponent { }
+export class AppComponent {
+
+    title: string;
+
+    constructor(public configuration: Configuration) {
+        this.title = configuration.Title;
+    }
+}
